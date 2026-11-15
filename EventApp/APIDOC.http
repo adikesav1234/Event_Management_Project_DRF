@@ -1,0 +1,50 @@
+#API For registration
+###
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username":"angel",
+    "email":"angel@gmail.com",
+    "password":"angel@123"
+}
+
+#API for UsersListView
+###
+GET http://127.0.0.1:8000/users/
+Accept: application/json
+
+#API for EventCreateView
+###
+POST http://127.0.0.1:8000/events/
+Content-Type : application/json
+Authorization : Basic adi:adi@123
+
+{
+    "title" : "Halloween Celebration",
+    "description" : "halloween celebration",
+    "date" : "2026-11-05",
+    "location" : "Infosys"   
+}
+
+#API for EventRetrieveUpdateDelete
+###
+GET http://127.0.0.1:8000/events/1/
+Accept: application/json
+Authorization: Basic adi:adi@123
+
+###
+PUT http://127.0.0.1:8000/events/1/
+Content-Type: application/json
+Authorization: Basic adi:adi@123
+
+{
+    "title" : "Movie Audio Launch",
+    "description" : "A new movie audio launch ceremony",
+    "date" : "2026-11-13",
+    "location" : "Edapally"
+}
+
+###
+DELETE http://127.0.0.1:8000/events/2/
+Authorization: Basic adi:adi@123
